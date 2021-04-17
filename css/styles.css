@@ -83,10 +83,8 @@ header a {
 
 header a:hover {
   border: 1px rgba(255, 255, 255, 0.7) solid;
-  border-radius: 120px;
   color: rgba(255, 255, 255, 0.7);
   padding: 6px 24px;
-  text-decoration: none;
 }
 
 nav {
@@ -110,6 +108,7 @@ hr {
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   padding: 20px;
@@ -117,12 +116,7 @@ hr {
 }
 
 .glass:hover {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  padding: 20px;
 }
 
 .glass h1,
@@ -144,6 +138,20 @@ p {
   flex-direction: row-reverse;
 }
 
+.contact > div:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.contact > div:nth-child(2) {
+  align-items: flex-start;
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  justify-content: flex-start;
+}
+
 .contact a {
   color: rgba(17, 17, 17, 0.418);
   margin-left: 10px;
@@ -156,12 +164,6 @@ p {
 
 .contact h3 {
   font-weight: 400;
-}
-
-.contact > div:nth-child(2) {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
 }
 
 .mdi {
@@ -189,15 +191,12 @@ p {
 
 .card:hover {
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  display: flex;
-  position: relative;
   top: -10px;
 }
 
 .card img {
-  max-width: 100px;
   max-height: 100px;
+  max-width: 100px;
 }
 
 main > div.glass {
@@ -220,5 +219,9 @@ h1,
   .card img {
     max-width: 30px;
     max-height: 30px;
+  }
+
+  .mdi {
+    font-size: 40px;
   }
 }
